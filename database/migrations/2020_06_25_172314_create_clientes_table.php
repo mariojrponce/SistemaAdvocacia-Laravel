@@ -19,6 +19,7 @@ class CreateClientesTable extends Migration
             $table->date('data_abertura');
             $table->string('reu');
             $table->string('fato_resumido');
+            $table->bigInteger('idpessoa');
             $table->timestamps();
         });
     }

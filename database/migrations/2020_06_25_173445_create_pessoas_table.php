@@ -17,6 +17,7 @@ class CreatePessoasTable extends Migration
             $table->id();
             $table->string('nome');
             $table->date('data_nascimento');
+            $table->bigInteger('idgenero');
             $table->timestamps();
         });
     }

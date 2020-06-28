@@ -17,6 +17,7 @@ class CreatePessoaFisicasTable extends Migration
             $table->id();
             $table->string('rg');
             $table->string('cpf');
+            $table->bigInteger('idpessoa');
             $table->timestamps();
         });
     }

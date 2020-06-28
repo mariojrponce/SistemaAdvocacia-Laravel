@@ -17,6 +17,7 @@ class CreateDocumentosTable extends Migration
             $table->id();
             $table->string('descricao');
             $table->string('caminho');
+            $table->bigInteger('idcliente');
             $table->timestamps();
         });
     }

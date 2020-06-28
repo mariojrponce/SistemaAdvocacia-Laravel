@@ -22,6 +22,8 @@ class CreateProcessosTable extends Migration
             $table->double('valor_causa');
             $table->date('data_processo');
             $table->string('descricao');
+            $table->bigInteger('idcliente');
+            $table->bigInteger('idadvogado');
             $table->timestamps();
         });
     }

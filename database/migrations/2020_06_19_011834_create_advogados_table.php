@@ -16,7 +16,7 @@ class CreateAdvogadosTable extends Migration
         Schema::create('advogados', function (Blueprint $table) {
             $table->id();
             $table->string('oab');
-            $table->bigInteger('idusuario');
+            $table->bigInteger('iduser');
             $table->timestamps();
         });
     }

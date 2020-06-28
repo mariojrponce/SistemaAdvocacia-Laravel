@@ -18,6 +18,7 @@ class CreateMovimentacoesTable extends Migration
             $table->string('descricao');
             $table->date('data');
             $table->longText('texto');
+            $table->bigInteger('idprocesso');
             $table->timestamps();
         });
     }

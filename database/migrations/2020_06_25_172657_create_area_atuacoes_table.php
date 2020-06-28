@@ -16,6 +16,7 @@ class CreateAreaAtuacoesTable extends Migration
         Schema::create('area_atuacoes', function (Blueprint $table) {
             $table->id();
             $table->string('descricao');
+            $table->bigInteger('idpessoa');
             $table->timestamps();
         });
     }

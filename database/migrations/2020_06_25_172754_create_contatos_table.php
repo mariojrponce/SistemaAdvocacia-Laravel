@@ -17,6 +17,7 @@ class CreateContatosTable extends Migration
             $table->id();
             $table->string('telefone');
             $table->string('email');
+            $table->bigInteger('idpessoa');
             $table->timestamps();
         });
     }
