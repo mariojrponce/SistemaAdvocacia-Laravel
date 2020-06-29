@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
 
 class HomeController extends Controller
 {
@@ -23,6 +24,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $numero_de_paginas = 15;
+
+        $usuarios = User::paginate($numero_de_paginas);
+
+        return view('home', compact('usuarios'));
     }
 }
