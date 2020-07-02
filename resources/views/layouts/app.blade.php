@@ -23,9 +23,16 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Sistema Adovocacia') }}
+                <a class="navbar-brand" href="{{ url('/cliente') }}">
+                    Sistema Advocacia
                 </a>
+
+                <div class="col ">
+                    <a class="text-neutral" href="{{ url('/home') }}">
+                        <span class="btn-inner--text text-15 ml-2">Usuários</span>
+                    </a>
+                </div>
+
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -64,6 +71,7 @@
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>
+
                                 </div>
                             </li>
                         @endguest
