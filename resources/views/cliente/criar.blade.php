@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Cadastrar Clientes</div>
+                <div class="card-header" style=" font-weight: normal; font-style: normal;">Cadastrar Clientes</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -17,18 +17,9 @@
                         <!-- INÍCIO: Form -->
                         <form action="{{ route('cliente.salvar') }}" method="POST" enctype="multipart/form-data" >
                             @csrf
-                            <div class="row">
-                                <div class="col">
-                                    <div class="container-fluid text-center mb-4">
-                                        <a class="flex-fill" style="font-family: 'Google Sans'; font-weight: bold; font-style: normal;"><h5>Cadastro</h5>
-                                            <text class="text-black-50" style="font-family: 'Google Sans'; font-weight: normal; font-style: normal;">Cliente</text>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
 
                             <fieldset>
-
+                                <a class="text-center" style="font-weight: bold; font-style: normal;"><h5>Dados pessoais</h5></a>
                                 {{-- Linha do genero --}}
                                 <div class="row">
                                     {{-- Coluna contém seleção do genero --}}
@@ -46,7 +37,7 @@
                                     </div>
                                 </div>
 
-                                {{-- Conteúdo do cliente --}}
+                                {{-- Conteúdo Pessoa --}}
                                 <div class="row">
                                     <div class="col" name="nome_col" id="nome_col_id" >
                                         <div class="form-group">
@@ -58,6 +49,66 @@
                                         <div class="form-group">
                                             <label id="inputData">Data de nascimento':</label>
                                             <input id="inputData" type="date" name="data_nascimento" class="form-control rounded-pill"  value="{{ old('data_nascimento') }}"  required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a class="text-center" style="font-weight: bold; font-style: normal;"><h5>Dados para contato</h5></a>
+                                {{-- Conteúdo Contato --}}
+                                <div class="row">
+                                    <div class="col" name="telefone_col" id="telefone_col_id" >
+                                        <div class="form-group">
+                                            <label for="inputTelefone">Telefone:</label>
+                                            <input id="inputTelefone" class="form-control rounded-pill" type="text" name="telefone" value="{{ old('telefone') }}" required>
+                                        </div>
+                                    </div>
+                                    <div class="col" name="email_col" id="email_col_id" >
+                                        <div class="form-group">
+                                            <label for="inputEmail">Email:</label>
+                                            <input id="inputEmail" class="form-control rounded-pill" type="text" name="email" value="{{ old('email') }}" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a class="text-center" style="font-weight: bold; font-style: normal;"><h5>Pessoa Física</h5></a>
+                                {{-- Conteúdo Pessoa física --}}
+                                <div class="row">
+                                    <div class="col" name="rg_col" id="rg_col_id" >
+                                        <div class="form-group">
+                                            <label for="inputRg">RG:</label>
+                                            <input id="inputRg" class="form-control rounded-pill" type="text" name="rg" value="{{ old('rg') }}">
+                                        </div>
+                                    </div>
+                                    <div class="col" name="cpf_col" id="cpf_col_id" >
+                                        <div class="form-group">
+                                            <label for="inputCpf">CPF:</label>
+                                            <input id="inputCpf" class="form-control rounded-pill" type="text" name="cpf" value="{{ old('cpf') }}">
+                                        </div>
+                                    </div>
+                                </div>
+                                <a class="text-center" style="font-weight: bold; font-style: normal;"><h5>Pessoa Jurídica</h5></a>
+                                {{-- Conteúdo Pessoa física --}}
+                                <div class="row-2">
+                                    <div class="col" name="razao_social_col" id="razao_social_col_id" >
+                                        <div class="form-group">
+                                            <label for="inputRazaoSocial">Razão Social:</label>
+                                            <input id="inputRazaoSocial" class="form-control rounded-pill" type="text" name="razao_social" value="{{ old('razao_social') }}">
+                                        </div>
+                                    </div>
+                                    <div class="col" name="inscricao_estadual_col" id="inscricao_estadual_col_id" >
+                                        <div class="form-group">
+                                            <label for="inputInscricaoEstadual">Inscricao Estadual:</label>
+                                            <input id="inputInscricaoEstadual" class="form-control rounded-pill" type="text" name="inscricao_estadual" value="{{ old('inscricao_estadual') }}">
+                                        </div>
+                                    </div>
+                                    <div class="col" name="cnpj_col" id="cnpjl_col_id" >
+                                        <div class="form-group">
+                                            <label for="inputCnpj">CNPJ:</label>
+                                            <input id="inputCnpj" class="form-control rounded-pill" type="text" name="cnpj" value="{{ old('cnpj') }}">
+                                        </div>
+                                    </div>
+                                    <div class="col" name="nome_fantasia_col" id="nome_fantasia_col_id" >
+                                        <div class="form-group">
+                                            <label for="inputCnpj">Nome Fantasia:</label>
+                                            <input id="inputCnpj" class="form-control rounded-pill" type="text" name="nome_fantasia" value="{{ old('nome_fantasia') }}">
                                         </div>
                                     </div>
                                 </div>

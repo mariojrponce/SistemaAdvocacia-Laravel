@@ -18,7 +18,7 @@ class CreatePessoaJuridicasTable extends Migration
             $table->string('razao_social')->nullable();
             $table->string('inscricao_estadual')->nullable();
             $table->string('cnpj');
-            $table->string('nome-fantasia')->nullable();
+            $table->string('nome_fantasia')->nullable();
             $table->bigInteger('idpessoa');
             $table->timestamps();
         });

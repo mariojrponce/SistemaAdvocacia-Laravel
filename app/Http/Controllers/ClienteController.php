@@ -6,6 +6,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Pessoa;
 use App\Genero;
+use App\Pessoa_fisica;
+use App\Pessoa_juridica;
+use App\Contato;
 use Illuminate\Support\Facades\DB;
 
 class ClienteController extends Controller
@@ -40,6 +43,32 @@ class ClienteController extends Controller
         $pessoa->data_nascimento = $request->data_nascimento;
         $pessoa->idgenero = $request->idgenero;
         $pessoa->save();
+
+        $contato = new Contato();
+        $contato->telefone = $request->telefone;
+        $contato->email = $request->email;
+        $contato->idpessoa = $pessoa->id;
+        $contato->save();
+
+        if($request->cpf){
+            $pessoa_fisica = new Pessoa_fisica();
+            $pessoa_fisica->rg = $request->rg;
+            $pessoa_fisica->cpf = $request->cpf;
+            $pessoa_fisica->idpessoa = $pessoa->id;
+            $pessoa_fisica->save();
+        }
+        if($request->cnpj){
+            //dd($request);
+            $pessoa_juridica = new Pessoa_juridica();
+            $pessoa_juridica->cnpj = $request->cnpj;
+            $pessoa_juridica->razao_social = $request->razao_social;
+            $pessoa_juridica->inscricao_estadual = $request->inscricao_estadual;
+            $pessoa_juridica->nome_fantasia = $request->nome_fantasia;
+            $pessoa_juridica->idpessoa = $pessoa->id;
+            $pessoa_juridica->save();
+        }
+
+
         return redirect()->route('cliente.listagem');
     }
 
