@@ -1,8 +1,8 @@
 # Sistema Advocacia
-....
+Este sistema é um projeto para facilitar a vida em um escritório de advocacia, onde o advogado irá cadastrar seus clientes anexando as devidas documentações de cada autor. Com a possiblidade de notificação a seus clientes do andamento de processos e avisos de eventuais encontros e audiências. 
 
 # Sobre o projeto
-....
+Projeto foi crado para a matéria de Banco de Dados II
 
 # Clonando um projeto e instalando o Laravel
 
