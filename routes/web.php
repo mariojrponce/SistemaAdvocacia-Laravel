@@ -22,3 +22,11 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+//Gerenciamento de CLIENTES
+Route::get('/cliente', 'ClienteController@listagem')->name('cliente.listagem');//Exibe todos os clientes
+
+Route::get('/cliente/criar', 'ClienteController@criar')->name('cliente.criar');//Página de criação de documentos
+
+Route::post('/cliente/salvar', 'ClienteController@salvar')->name('cliente.salvar');//ação de salvar documentos
