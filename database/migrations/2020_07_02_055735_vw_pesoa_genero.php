@@ -14,7 +14,7 @@ class VwPesoaGenero extends Migration
     public function up()
     {
         DB::unprepared('CREATE VIEW vw_pessoa_genero AS
-        SELECT p.nome, p.data_nascimento, g.descricao FROM pessoas p
+        SELECT p.id, p.nome, p.data_nascimento, g.descricao FROM pessoas p
         INNER JOIN generos g ON p.idgenero = g.id;');
     }
 

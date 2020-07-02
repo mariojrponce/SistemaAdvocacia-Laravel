@@ -57,15 +57,15 @@
                                     <div class="col" name="nascimento_col" id="nacimento_col_id">
                                         <div class="form-group">
                                             <label id="inputData">Data de nascimento':</label>
-                                            <input id="inputData" type="date" name="data_nascimento" class="form-control rounded-pill"  value="{{ old('data_doc') }}"  required>
+                                            <input id="inputData" type="date" name="data_nascimento" class="form-control rounded-pill"  value="{{ old('data_nascimento') }}"  required>
                                         </div>
                                     </div>
                                 </div>
 
                                 <!--Botão enviar formulário-->
-                                <div class="row mb-5" name="buttons_row" id="buttons_row_id" >
+                                <div class="row" name="buttons_row" id="buttons_row_id" >
                                         <div class="mt-4 ml-4"><a href="{{url()->previous()}}" class="btn btn-outline-primary" role="button">Voltar</a></div>
-                                    <div class="mt-4 ml-auto mr-4 mb-4">
+                                    <div class="mt-4 ml-auto mr-4">
                                         <button type="submit" class="btn btn-outline-success mr-3">Salvar</button>
                                         <button type="reset" class="btn btn-outline-danger">Limpar</button>
                                     </div>
