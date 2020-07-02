@@ -32,7 +32,7 @@
                                     {{$pessoa->data_nascimento}}
                                 </th>
                                 <th>
-                                    {{$pessoa->idgenero}}
+                                    {{$pessoa->descricao}}
                                 </th>
                             @endforeach
                         @endslot

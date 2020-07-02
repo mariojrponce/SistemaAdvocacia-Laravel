@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+
 use Illuminate\Http\Request;
 use App\Pessoa;
 use App\Genero;
+use Illuminate\Support\Facades\DB;
 
 class ClienteController extends Controller
 {
@@ -20,9 +22,9 @@ class ClienteController extends Controller
 
     public function listagem()
     {
-        $numero_de_paginas = 15;
 
-        $pessoas = Pessoa::paginate($numero_de_paginas);
+        $pessoas = DB::select('SELECT nome, data_nascimento, descricao FROM public.vw_pessoa_genero');
+        //dd($pessoas);
 
         return view('cliente.listagem', compact('pessoas'));
     }
