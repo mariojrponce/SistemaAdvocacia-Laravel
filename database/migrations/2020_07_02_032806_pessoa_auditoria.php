@@ -16,6 +16,7 @@ class PessoaAuditoria extends Migration
         Schema::create('pessoa_auditoria', function (Blueprint $table) {
             $table->id('idpessoa_auditoria');
             $table->string('utilizador');
+            $table->date('data_criacao');
         });
     }
 

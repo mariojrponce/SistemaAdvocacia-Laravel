@@ -12,9 +12,9 @@ class ProcedurePessoa extends Migration
         RETURNS trigger AS $registro_trigger$
         BEGIN
         INSERT INTO pessoa_auditoria
-        (utilizador)
+        (utilizador, data_criacao)
         VALUES
-        (current_user);
+        (current_user, current_timestamp);
         RETURN NEW;
         END;
         $registro_trigger$ language plpgsql;');
