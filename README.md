@@ -75,7 +75,7 @@ Projeto foi desenvolvido para a matéria de Banco de Dados II no Centro Universi
 
 $ git init
 
-$ git remote add origin https://gitlab.tre-to.jus.br/jheymerson.aranha/Compilada.git
+$ git remote add origin https://github.com/mariojrponce/SistemaAdvocacia-Laravel.git
 
 $ git add .
 
